@@ -53,7 +53,7 @@ void app_setup()
 void app_main()
 {
   // TODO: Start your main tasks here
-  /* Simply create a task that monitors free heap memory */
-  xTaskCreate(&monitoring_task, (const char * const)"monitor_task",
-              configMINIMAL_STACK_SIZE, NULL, 1, NULL);
+  /* Simply create a task that monitors free heap memory and it is pinned to AVAILABLE CPU */
+  xTaskCreatePinnedToCore(&monitoring_task, (const char * const)"monitor_task",
+                          configMINIMAL_STACK_SIZE, NULL, 1, NULL, tskNO_AFFINITY);
 }
