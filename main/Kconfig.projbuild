@@ -1,0 +1,7 @@
+menu "Starter configuration"
+  config DEFAULT_DEVICE_NAME
+    string "Device Name"
+    default "ESP32-Starter"
+    help
+      User's config device name string.
+endmenu

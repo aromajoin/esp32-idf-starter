@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "chrono": "c",
+    "system_error": "c",
+    "__locale": "c",
+    "__string": "c"
+  },
+  "mos.port": "",
+  "workbench.colorCustomizations": {},
+  "editor.tabSize": 2
+}

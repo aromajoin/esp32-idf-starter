@@ -1,0 +1,55 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "menuconfig",
+      "type": "shell",
+      "command": "idf.py menuconfig",
+      "problemMatcher": []
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "idf.py build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "flash",
+      "type": "shell",
+      "command": "idf.py -p ${input:serialPort} flash",
+      "problemMatcher": []
+    },
+    {
+      "label": "monitor",
+      "type": "shell",
+      "command": "idf.py -p ${input:serialPort} monitor",
+      "problemMatcher": []
+    },
+    {
+      "label": "flash and monitor",
+      "type": "shell",
+      "command": "idf.py -p ${input:serialPort} flash monitor",
+      "problemMatcher": []
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": "idf.py clean",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "serialPort",
+      "type": "promptString",
+      "description": "Serial port path",
+      "default": "/dev/ttyUSB0"
+    }
+  ]
+}
